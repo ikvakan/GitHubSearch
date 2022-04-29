@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: jp.wasabeef:picasso-transformations:2.2.1@aar">
+    <CLASSES>
+      <root url="file://D:/Android/Android_SDK_Home/.gradle/caches/transforms-2/files-2.1/765a0ee25115f9e6380198ab64adf5c0/jetified-picasso-transformations-2.2.1/res" />
+      <root url="file://D:/Android/Android_SDK_Home/.gradle/caches/transforms-2/files-2.1/44fdf84b7c214ba692bdb59030bd3c53/jetified-picasso-transformations-2.2.1/res" />
+      <root url="file://D:/Android/Android_SDK_Home/.gradle/caches/transforms-2/files-2.1/655b65227e92ed220d8d38de038b4125/jetified-picasso-transformations-2.2.1/res" />
+      <root url="file://D:/Android/Android_SDK_Home/.gradle/caches/transforms-2/files-2.1/ab655539d7eb3ec0688d528de7e03451/jetified-picasso-transformations-2.2.1/AndroidManifest.xml" />
+      <root url="jar://D:/Android/Android_SDK_Home/.gradle/caches/transforms-2/files-2.1/ab655539d7eb3ec0688d528de7e03451/jetified-picasso-transformations-2.2.1/jars/classes.jar!/" />
+      <root url="file://D:/Android/Android_SDK_Home/.gradle/caches/transforms-2/files-2.1/ab655539d7eb3ec0688d528de7e03451/jetified-picasso-transformations-2.2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Android/Android_SDK_Home/.gradle/caches/modules-2/files-2.1/jp.wasabeef/picasso-transformations/2.2.1/9f077a9a74a693a9677ffdec529ca0e80ab076c6/picasso-transformations-2.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Android/Android_SDK_Home/.gradle/caches/modules-2/files-2.1/jp.wasabeef/picasso-transformations/2.2.1/c29e671394e4a4b73bc0783793f14e592b0bd07f/picasso-transformations-2.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
