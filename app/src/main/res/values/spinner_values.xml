@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_values">
+        <item>Forks</item>
+        <item>Watchers</item>
+        <item>Issues</item>
+    </string-array>
+</resources>

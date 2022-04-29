@@ -20,7 +20,6 @@ import hr.ikvakan.git_hub_search.viewModels.UserRepositoryViewModel
 import kotlinx.android.synthetic.main.activity_host.*
 
 
-
 @AndroidEntryPoint
 class HostActivity : AppCompatActivity() {
 
@@ -33,7 +32,24 @@ class HostActivity : AppCompatActivity() {
         setContentView(R.layout.activity_host)
 
         setupRecyclerView()
+        setupSpinner()
+        displayFilterButton(false)
+
+        btnFilter.setOnClickListener {
+
+        }
+
     }
+
+    private fun displayFilterButton(visible: Boolean) {
+        btnFilter.visibility=if(visible)View.VISIBLE else View.GONE
+    }
+
+    private fun setupSpinner() {
+        spinner.setItems(resources.getStringArray(R.array.spinner_values).toMutableList())
+        displaySpinner(false)
+    }
+
 
     private fun setupRecyclerView() {
         rvRepositoryAdapter = RepositoryRecyclerAdapter(this)
@@ -44,16 +60,14 @@ class HostActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-
         menuInflater.inflate(R.menu.host_menu, menu)
-
         val searchItem = menu.findItem(R.id.app_bar_search)
         val searchView = searchItem?.actionView as SearchView
-
         setupSearchView(searchView)
         return super.onCreateOptionsMenu(menu)
 
     }
+
 
     private fun setupSearchView(searchView: SearchView) {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -65,23 +79,28 @@ class HostActivity : AppCompatActivity() {
                         when (dataState) {
                             is DataState.Success<List<UserRepositoryModel>> -> {
                                 displayProgressBar(false)
+                                displaySpinner(true)
+                                displayFilterButton(true)
                                 rvRepositoryAdapter.setData(
                                     dataState.data as MutableList<UserRepositoryModel>,
                                     query
                                 )
+                                spinner.visibility = View.VISIBLE
+
                             }
                             is DataState.Error -> {
                                 displayProgressBar(false)
+                                displaySpinner(false)
+                                displayFilterButton(false)
                                 hostActivity.showSnackBar("dataState.exception.message")
                             }
                             is DataState.Loading -> {
-
                                 displayProgressBar(true)
+                                displaySpinner(false)
+                                displayFilterButton(false)
                             }
                         }
-
                     })
-
                 }
                 return false
             }
@@ -93,7 +112,7 @@ class HostActivity : AppCompatActivity() {
     }
 
     private fun showError(message: String?) {
-        showToast(message,Toast.LENGTH_LONG)
+        showToast(message, Toast.LENGTH_LONG)
 
     }
 
@@ -107,8 +126,8 @@ class HostActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun displayProgressBar(visible :Boolean) {
-       progressBar.visibility=if(visible) View.VISIBLE else View.GONE
+    private fun displayProgressBar(visible: Boolean) {
+        progressBar.visibility = if (visible) View.VISIBLE else View.GONE
     }
 
     private fun exitApp() {
@@ -120,6 +139,10 @@ class HostActivity : AppCompatActivity() {
             setNegativeButton("Cancel", null)
             show()
         }
+    }
+
+    fun displaySpinner(visible: Boolean) {
+        spinner.visibility = if (visible) View.VISIBLE else View.GONE
     }
 }
 

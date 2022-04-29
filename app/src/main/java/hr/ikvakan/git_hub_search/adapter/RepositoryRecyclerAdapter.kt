@@ -30,6 +30,9 @@ class RepositoryRecyclerAdapter(private val context: Context) : RecyclerView.Ada
         private val tvUserName: TextView = itemView.findViewById(R.id.tvUserName)
         private val tvRepositoryName: TextView = itemView.findViewById(R.id.tvRepositoryName)
         private val ivAvatar: ImageView = itemView.findViewById(R.id.ivAvatar)
+        private val tvWatcher: TextView = itemView.findViewById(R.id.tvWatchersCount)
+        private val tvIssues: TextView = itemView.findViewById(R.id.tvOpenIssueCount)
+        private val tvForks: TextView = itemView.findViewById(R.id.tvForkCount)
 
         fun bind(item: UserRepositoryModel) {
             Picasso.get()
@@ -39,6 +42,9 @@ class RepositoryRecyclerAdapter(private val context: Context) : RecyclerView.Ada
                 .into(ivAvatar)
             tvRepositoryName.text=item.name
             tvUserName.text=item.owner.userName
+            tvWatcher.text=item.watchers_count.toString()
+            tvIssues.text=item.open_issues_count.toString()
+            tvForks.text=item.forks_count.toString()
         }
     }
 
