@@ -1,12 +1,14 @@
 package hr.ikvakan.git_hub_search.utils.extensions
 
 import android.app.Activity
+import android.app.Dialog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager
 
 
@@ -31,4 +33,10 @@ fun Context.isOnline() :Boolean {
 fun Context.showToast(message:String?,duration: Int){
     Toast.makeText(this,message,duration).show()
 }
+
+fun DialogFragment.showToast(context: Context,message:String?,duration: Int){
+    Toast.makeText(context,message,duration).show()
+
+}
+
 

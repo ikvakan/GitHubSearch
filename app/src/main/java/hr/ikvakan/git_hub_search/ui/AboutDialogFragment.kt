@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
@@ -13,10 +16,13 @@ import hr.ikvakan.git_hub_search.model.UserModel
 import hr.ikvakan.git_hub_search.retrofit.DataState
 import hr.ikvakan.git_hub_search.ui.activity.ITEM_URL
 import hr.ikvakan.git_hub_search.ui.activity.WebViewActivity
+import hr.ikvakan.git_hub_search.utils.extensions.showToast
 import hr.ikvakan.git_hub_search.utils.extensions.startActivity
 import hr.ikvakan.git_hub_search.viewModels.UserViewModel
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
+import kotlinx.android.synthetic.main.about_dialog_fragment.*
 import kotlinx.android.synthetic.main.about_dialog_fragment.view.*
+import kotlinx.android.synthetic.main.activity_host.*
 import kotlinx.android.synthetic.main.item.*
 
 @AndroidEntryPoint
@@ -46,13 +52,16 @@ class AboutDialogFragment(
         viewModel.dataState.observe(this, { dataState ->
             when (dataState) {
                 is DataState.Success<UserModel> -> {
+                    displayProgressBar(false)
                     populateUser(dataState.data, dialogView)
                 }
                 is DataState.Error -> {
-                    return@observe
+                    displayProgressBar(false)
+                    showToast(requireContext(),dataState.exception.message,Toast.LENGTH_LONG)
                 }
                 is DataState.Loading -> {
-                    return@observe
+                    displayProgressBar(true)
+
                 }
             }
         })
@@ -69,6 +78,8 @@ class AboutDialogFragment(
         view.tvUserLoaction.text = model.location ?: "No location provided"
         view.tvUserUrl.text = userUrl
     }
-
+    private fun displayProgressBar(visible: Boolean) {
+        progressBarDialog.visibility = if (visible) View.VISIBLE else View.GONE
+    }
 
 }

@@ -61,6 +61,7 @@ class HostActivity : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (!query.isNullOrBlank()) {
+
                     viewModel.getUserRepositoriesByUserName(query.toString())
 
                     viewModel.dataState.observe(this@HostActivity, { dataState ->
