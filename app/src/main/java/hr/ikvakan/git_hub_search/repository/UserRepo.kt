@@ -24,7 +24,6 @@ constructor(
                 emit(DataState.Success(user))
             } catch (e: Exception) {
                 emit(DataState.Error(e))
-
             }
         }
 

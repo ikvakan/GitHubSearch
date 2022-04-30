@@ -17,32 +17,22 @@ class UserRepositoryViewModel
 @Inject
 constructor(
     private val repository: UserRepositoryRepo
-
 ) : ViewModel() {
 
-    private val _dataState: MutableLiveData<DataState<List<UserRepositoryModel>>> =
-        MutableLiveData()
-    val dataState: LiveData<DataState<List<UserRepositoryModel>>>
+    private val _dataState: MediatorLiveData<DataState<MutableList<UserRepositoryModel>>> =
+        MediatorLiveData()
+    val dataState: LiveData<DataState<MutableList<UserRepositoryModel>>>
         get() = _dataState
 
     fun getUserRepositoriesByUserName(userName: String) {
         viewModelScope.launch {
-            repository.getRepositoryForUserName(userName)
-                .onEach { dataState ->
-                    _dataState.value = dataState
-                }.launchIn(viewModelScope)
+            _dataState.addSource(
+                repository.getRepositoryForUserName(userName).asLiveData()
+            ) { item ->
+                _dataState.value = item
+            }
         }
-
     }
-
-
-}
-
-
-
-
-sealed class UserRepositoryStateEvent {
-    object GetUserRepositories : UserRepositoryStateEvent()
 
 }
 

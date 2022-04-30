@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
             <ImageView
                 android:id="@+id/ivAvatar"
                 android:layout_width="100dp"
@@ -70,7 +69,6 @@
                     android:textAlignment="center"
                     android:textStyle="italic" />
 
-
             </LinearLayout>
 
         </LinearLayout>
@@ -118,6 +116,7 @@
                     android:layout_width="@dimen/ivWidthPager"
                     android:layout_height="@dimen/ivHeightPager"
                     android:text="@string/item_text_size" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -136,97 +135,14 @@
                     android:layout_width="@dimen/ivWidthPager"
                     android:layout_height="@dimen/ivHeightPager"
                     android:text="@string/item_text_size" />
+
             </LinearLayout>
 
         </LinearLayout>
 
-
-
-
     </LinearLayout>
-
 
 </androidx.cardview.widget.CardView>
 
 
 
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-    <!--<androidx.cardview.widget.CardView-->
-    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="wrap_content"-->
-    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--    app:cardBackgroundColor="@color/white"-->
-    <!--    app:cardCornerRadius="9dp"-->
-    <!--    app:cardUseCompatPadding="true"-->
-    <!--    xmlns:tools="http://schemas.android.com/tools"-->
-
-    <!--    >-->
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="132dp"-->
-    <!--        android:layout_margin="10dp"-->
-    <!--        android:background="@color/cardview_light_background"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        android:padding="10dp">-->
-
-    <!--  -->
-    <!--        <ImageView-->
-    <!--            android:id="@+id/ivAvatar"-->
-    <!--            android:layout_width="100dp"-->
-    <!--            android:layout_height="110dp"-->
-    <!--            android:padding="5dp"-->
-    <!--            android:src="@mipmap/ic_launcher" />-->
-
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:orientation="vertical">-->
-
-    <!--            <TextView-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="User name"-->
-
-    <!--                android:textAlignment="center"-->
-    <!--                android:textSize="12sp"-->
-    <!--                android:textStyle="bold" />-->
-
-    <!--            <TextView-->
-    <!--                android:id="@+id/tvUserName"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginBottom="5dp"-->
-    <!--                android:text="text"-->
-    <!--                android:textAlignment="center"-->
-    <!--                android:textStyle="italic" />-->
-
-    <!--            <TextView-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="Repository name"-->
-    <!--                android:textAlignment="center"-->
-    <!--                android:textSize="12sp"-->
-    <!--                android:textStyle="bold" />-->
-
-    <!--            <TextView-->
-    <!--                android:id="@+id/tvRepositoryName"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="text"-->
-    <!--                android:textAlignment="center"-->
-    <!--                android:textStyle="italic" />-->
-    <!--            -->
-    <!--            -->
-    <!--            -->
-    <!--        </LinearLayout>-->
-
-    <!--        -->
-    <!--            -->
-
-    <!--    </LinearLayout>-->
-
-
-    <!--</androidx.cardview.widget.CardView>-->

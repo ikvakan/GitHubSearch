@@ -4,5 +4,4 @@ import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class GitHubSearch : Application() {
-
 }

@@ -10,21 +10,24 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import hr.ikvakan.git_hub_search.AboutDialogFragment
-import hr.ikvakan.git_hub_search.ITEM_POSITION
+import hr.ikvakan.git_hub_search.ui.AboutDialogFragment
+import hr.ikvakan.git_hub_search.ui.activity.ITEM_POSITION
 import hr.ikvakan.git_hub_search.R
-import hr.ikvakan.git_hub_search.RepositoryPagerActivity
+import hr.ikvakan.git_hub_search.ui.activity.RepositoryPagerActivity
 import hr.ikvakan.git_hub_search.model.UserRepositoryModel
 import hr.ikvakan.git_hub_search.utils.constants.Constants.QUERY_EXTRA
+import hr.ikvakan.git_hub_search.utils.constants.Constants.SORT_TYPE
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 import kotlinx.android.synthetic.main.item.view.*
 
 
 
+//const val SORT_TYPE="sort_type"
 
 class RepositoryRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<RepositoryRecyclerAdapter.ViewHolder>() {
     private var items: MutableList<UserRepositoryModel> = mutableListOf()
     private lateinit var _query:String
+    private lateinit var _sortType:String
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvUserName: TextView = itemView.findViewById(R.id.tvUserName)
@@ -58,6 +61,7 @@ class RepositoryRecyclerAdapter(private val context: Context) : RecyclerView.Ada
             Intent(context, RepositoryPagerActivity::class.java).also {
                 it.putExtra(QUERY_EXTRA, _query)
                 it.putExtra(ITEM_POSITION, position)
+                it.putExtra(SORT_TYPE,_sortType)
                 context.startActivity(it)
             }
         }
@@ -73,9 +77,10 @@ class RepositoryRecyclerAdapter(private val context: Context) : RecyclerView.Ada
 
     override fun getItemCount() = items.count()
 
-    fun setData(newItems: MutableList<UserRepositoryModel>, query: String){
+    fun setData(newItems: MutableList<UserRepositoryModel>, query: String,sortType:String){
         items=newItems
         _query=query
+        _sortType=sortType
         notifyDataSetChanged()
     }
 }

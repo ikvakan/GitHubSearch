@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        >
 
         <ImageView
             android:id="@+id/ivAvatarPagerItem"
@@ -168,7 +168,6 @@
                 android:padding="10dp"
                 android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 "
                 android:textAlignment="viewStart" />
-            -->
 
         </LinearLayout>
 
@@ -239,6 +238,8 @@
 
         <Button
             android:id="@+id/btnGoToGithub"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="30dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Repository" />

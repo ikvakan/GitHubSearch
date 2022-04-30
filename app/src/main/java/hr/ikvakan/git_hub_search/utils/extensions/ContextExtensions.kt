@@ -41,7 +41,6 @@ fun Context.isOnline() :Boolean {
     return false;
 }
 
-
 fun Context.showToast(message:String?,duration: Int){
     Toast.makeText(this,message,duration).show()
 }

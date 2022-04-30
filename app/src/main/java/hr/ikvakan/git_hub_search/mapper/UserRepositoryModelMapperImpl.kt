@@ -31,7 +31,8 @@ constructor() : ModelMapper<UserRepositoryItem, UserRepositoryModel> {
         )
     }
 
-    fun mapFromEntityItemToDomainModelList(entityItems:List<UserRepositoryItem>) : List<UserRepositoryModel> {
-        return entityItems.map { mapFromEntityItemToDomainModel(it) }
+    fun mapFromEntityItemToDomainModelList(entityItems:MutableList<UserRepositoryItem>) : MutableList<UserRepositoryModel> {
+        return entityItems.map { mapFromEntityItemToDomainModel(it) } as MutableList<UserRepositoryModel>
+
     }
 }

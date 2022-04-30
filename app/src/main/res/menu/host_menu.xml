@@ -16,5 +16,4 @@
         android:title="Exit"
         app:showAsAction="ifRoom" />
 
-
 </menu>

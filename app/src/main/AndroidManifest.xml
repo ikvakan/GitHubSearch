@@ -3,6 +3,7 @@
     package="hr.ikvakan.git_hub_search">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
         android:name="hr.ikvakan.git_hub_search.hilt.GitHubSearch"
         android:allowBackup="true"
@@ -11,14 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Decode_demo">
-        <activity android:name="hr.ikvakan.git_hub_search.WebViewActivity" />
-        <activity android:name="hr.ikvakan.git_hub_search.RepositoryPagerActivity" />
+        <activity android:name="hr.ikvakan.git_hub_search.ui.activity.WebViewActivity" />
+        <activity android:name="hr.ikvakan.git_hub_search.ui.activity.RepositoryPagerActivity" />
         <receiver
             android:name="hr.ikvakan.git_hub_search.GitHubReceiver"
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name="hr.ikvakan.git_hub_search.HostActivity" />
+        <activity android:name="hr.ikvakan.git_hub_search.ui.activity.HostActivity" />
 
         <service
             android:name="hr.ikvakan.git_hub_search.GitHubAppService"
@@ -26,7 +27,7 @@
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- android:permission="android.permission.BIND_JOB_SER VICE" /> -->
         <activity
-            android:name="hr.ikvakan.git_hub_search.SplashScreenActivity"
+            android:name="hr.ikvakan.git_hub_search.ui.activity.SplashScreenActivity"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashScreenTheme">

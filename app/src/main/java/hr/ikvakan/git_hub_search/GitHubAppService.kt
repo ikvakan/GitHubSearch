@@ -10,9 +10,7 @@ private const val JOB_ID=1
 class GitHubAppService : JobIntentService() {
     override fun onHandleWork(intent: Intent) {
         Thread.sleep(6000)
-
         sendBroadcast<GitHubReceiver>()
-
     }
 
     companion object{

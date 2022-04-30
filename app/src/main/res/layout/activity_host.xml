@@ -4,41 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HostActivity"
+    tools:context=".ui.activity.HostActivity"
     android:orientation="vertical"
     android:id="@+id/hostActivity"
     >
 
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
     <com.jaredrummler.materialspinner.MaterialSpinner
         android:id="@+id/spinner"
         android:layout_width="200dp"
-        android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textAlignment="center"
-
         />
-<Button
-    android:id="@+id/btnFilter"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:backgroundTint="@android:color/transparent"
-    android:textColor="@color/black"
-    android:text="Filter"
-    android:textStyle="bold"
-
-    />
-
-</LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
@@ -54,8 +33,5 @@
         android:layout_gravity="center"
         android:visibility="gone"
         />
-
-
-
 
 </LinearLayout>

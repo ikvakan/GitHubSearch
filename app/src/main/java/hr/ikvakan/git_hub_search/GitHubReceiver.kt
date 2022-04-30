@@ -3,6 +3,7 @@ package hr.ikvakan.git_hub_search
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import hr.ikvakan.git_hub_search.ui.activity.DATA_IMPORTED
 import hr.ikvakan.git_hub_search.utils.setBooleanPreference
 
 class GitHubReceiver : BroadcastReceiver() {

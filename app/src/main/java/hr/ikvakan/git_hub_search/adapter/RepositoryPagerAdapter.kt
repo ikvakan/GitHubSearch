@@ -9,14 +9,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import hr.ikvakan.git_hub_search.ITEM_URL
+import hr.ikvakan.git_hub_search.ui.activity.ITEM_URL
 import hr.ikvakan.git_hub_search.R
-import hr.ikvakan.git_hub_search.WebViewActivity
+import hr.ikvakan.git_hub_search.ui.activity.WebViewActivity
 import hr.ikvakan.git_hub_search.model.UserRepositoryModel
 import hr.ikvakan.git_hub_search.utils.formatDate
 import hr.ikvakan.git_hub_search.utils.startActivity
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
-import kotlinx.android.synthetic.main.repository_pager.view.*
 
 
 class RepositoryPagerAdapter(
@@ -37,7 +36,6 @@ class RepositoryPagerAdapter(
         private val tvWatchers: TextView = itemView.findViewById(R.id.tvWatchersCount)
         private val tvIssues: TextView = itemView.findViewById(R.id.tvOpenIssueCount)
         private val btnGitHub: Button = itemView.findViewById(R.id.btnGoToGithub)
-
 
         fun bind(item: UserRepositoryModel) {
             Picasso.get()
@@ -65,9 +63,6 @@ class RepositoryPagerAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.repository_pager, parent, false)
-
-
-
         return ViewHolder(itemView)
 
     }

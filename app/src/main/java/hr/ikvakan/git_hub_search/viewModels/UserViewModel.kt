@@ -18,7 +18,6 @@ import javax.inject.Inject
 class UserViewModel
 @Inject constructor(
     private val repository: UserRepo,
-    private val userModelMapperImpl: UserModelMapperImpl
 ) : ViewModel() {
     private val _dataState: MutableLiveData<DataState<UserModel>> = MutableLiveData()
     val dataState: LiveData<DataState<UserModel>>
@@ -31,7 +30,5 @@ class UserViewModel
                     _dataState.value = dataState
                 }.launchIn(viewModelScope)
         }
-
     }
-
 }

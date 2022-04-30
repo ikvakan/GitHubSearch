@@ -11,5 +11,5 @@ interface GitHubApi {
     suspend fun getUser(@Path("userName") userName:String): UserItem
 
     @GET("users/{userName}/repos")
-    suspend fun getRepositoryForUserName(@Path("userName") userName: String) :List<UserRepositoryItem>
+    suspend fun getRepositoryForUserName(@Path("userName") userName: String) :MutableList<UserRepositoryItem>
 }

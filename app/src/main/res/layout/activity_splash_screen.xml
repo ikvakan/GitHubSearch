@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="50dp"
-    tools:context=".SplashScreenActivity">
+    tools:context=".ui.activity.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/ivSplash"
