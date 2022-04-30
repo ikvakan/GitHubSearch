@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="splashIvHeight">400dp</dimen>
-    <dimen name="tvSplash_text_size">7pt</dimen>
+    <dimen name="tvSplash_text_size">15pt</dimen>
     <dimen name="tvRepositoryTextSize">20sp</dimen>
     <dimen name="layoutPadding">6dp</dimen>
     <dimen name="tvPadding">5dp</dimen>
