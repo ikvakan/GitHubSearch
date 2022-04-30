@@ -69,7 +69,6 @@ class RepositoryRecyclerAdapter(private val context: Context) : RecyclerView.Ada
             AboutDialogFragment(_query,items[position].html_url,items[position].owner.html_url).also { dialog->
                 dialog.show((context as AppCompatActivity).supportFragmentManager,"dialog_tag")
             }
-
         }
 
         holder.bind(items[position])

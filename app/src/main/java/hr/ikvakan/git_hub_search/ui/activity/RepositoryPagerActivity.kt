@@ -11,7 +11,7 @@ import hr.ikvakan.git_hub_search.adapter.RepositoryPagerAdapter
 
 import hr.ikvakan.git_hub_search.model.UserRepositoryModel
 import hr.ikvakan.git_hub_search.retrofit.DataState
-import hr.ikvakan.git_hub_search.utils.SortType
+import hr.ikvakan.git_hub_search.utils.enums.SortType
 import hr.ikvakan.git_hub_search.utils.constants.Constants.QUERY_EXTRA
 import hr.ikvakan.git_hub_search.utils.constants.Constants.SORT_TYPE
 import hr.ikvakan.git_hub_search.utils.showToast
@@ -30,7 +30,6 @@ class RepositoryPagerActivity() : AppCompatActivity() {
     private lateinit var repositoryPageAdapter: RepositoryPagerAdapter
     private var itemPosition: Int = 0
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repository_pager)
@@ -38,7 +37,6 @@ class RepositoryPagerActivity() : AppCompatActivity() {
         setupRepositoryPagerView()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
-
 
     private fun setupRepositoryPagerView() {
         itemPosition = intent.getIntExtra(ITEM_POSITION, 0)

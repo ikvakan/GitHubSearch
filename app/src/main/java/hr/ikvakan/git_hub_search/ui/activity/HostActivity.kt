@@ -15,8 +15,8 @@ import hr.ikvakan.git_hub_search.R
 import hr.ikvakan.git_hub_search.adapter.RepositoryRecyclerAdapter
 import hr.ikvakan.git_hub_search.model.UserRepositoryModel
 import hr.ikvakan.git_hub_search.retrofit.DataState
-import hr.ikvakan.git_hub_search.utils.SortType
-import hr.ikvakan.git_hub_search.utils.SpinnerOptions
+import hr.ikvakan.git_hub_search.utils.enums.SortType
+import hr.ikvakan.git_hub_search.utils.enums.SpinnerOptions
 import hr.ikvakan.git_hub_search.utils.extensions.showSnackBar
 import hr.ikvakan.git_hub_search.utils.showToast
 import hr.ikvakan.git_hub_search.viewModels.UserRepositoryViewModel
@@ -62,6 +62,7 @@ class HostActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (!query.isNullOrBlank()) {
                     viewModel.getUserRepositoriesByUserName(query.toString())
+
                     viewModel.dataState.observe(this@HostActivity, { dataState ->
                         when (dataState) {
                             is DataState.Success<MutableList<UserRepositoryModel>> -> {
