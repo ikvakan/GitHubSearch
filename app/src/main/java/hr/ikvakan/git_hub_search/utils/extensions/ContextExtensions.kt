@@ -1,4 +1,4 @@
-package hr.ikvakan.git_hub_search.utils
+package hr.ikvakan.git_hub_search.utils.extensions
 
 import android.app.Activity
 import android.content.BroadcastReceiver

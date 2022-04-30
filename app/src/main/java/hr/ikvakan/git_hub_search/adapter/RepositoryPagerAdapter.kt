@@ -14,7 +14,7 @@ import hr.ikvakan.git_hub_search.R
 import hr.ikvakan.git_hub_search.ui.activity.WebViewActivity
 import hr.ikvakan.git_hub_search.model.UserRepositoryModel
 import hr.ikvakan.git_hub_search.utils.formatDate
-import hr.ikvakan.git_hub_search.utils.startActivity
+import hr.ikvakan.git_hub_search.utils.extensions.startActivity
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 
 

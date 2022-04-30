@@ -14,7 +14,7 @@ import hr.ikvakan.git_hub_search.retrofit.DataState
 import hr.ikvakan.git_hub_search.utils.enums.SortType
 import hr.ikvakan.git_hub_search.utils.constants.Constants.QUERY_EXTRA
 import hr.ikvakan.git_hub_search.utils.constants.Constants.SORT_TYPE
-import hr.ikvakan.git_hub_search.utils.showToast
+import hr.ikvakan.git_hub_search.utils.extensions.showToast
 import hr.ikvakan.git_hub_search.viewModels.UserRepositoryViewModel
 import kotlinx.android.synthetic.main.activity_host.*
 

@@ -13,7 +13,7 @@ import hr.ikvakan.git_hub_search.model.UserModel
 import hr.ikvakan.git_hub_search.retrofit.DataState
 import hr.ikvakan.git_hub_search.ui.activity.ITEM_URL
 import hr.ikvakan.git_hub_search.ui.activity.WebViewActivity
-import hr.ikvakan.git_hub_search.utils.startActivity
+import hr.ikvakan.git_hub_search.utils.extensions.startActivity
 import hr.ikvakan.git_hub_search.viewModels.UserViewModel
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 import kotlinx.android.synthetic.main.about_dialog_fragment.view.*

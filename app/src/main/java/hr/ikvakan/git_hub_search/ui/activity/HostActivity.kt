@@ -18,7 +18,7 @@ import hr.ikvakan.git_hub_search.retrofit.DataState
 import hr.ikvakan.git_hub_search.utils.enums.SortType
 import hr.ikvakan.git_hub_search.utils.enums.SpinnerOptions
 import hr.ikvakan.git_hub_search.utils.extensions.showSnackBar
-import hr.ikvakan.git_hub_search.utils.showToast
+import hr.ikvakan.git_hub_search.utils.extensions.showToast
 import hr.ikvakan.git_hub_search.viewModels.UserRepositoryViewModel
 import kotlinx.android.synthetic.main.activity_host.*
 

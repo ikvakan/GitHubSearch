@@ -6,9 +6,9 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import hr.ikvakan.git_hub_search.R
 import hr.ikvakan.git_hub_search.utils.extensions.applyAnimation
-import hr.ikvakan.git_hub_search.utils.isOnline
-import hr.ikvakan.git_hub_search.utils.showToast
-import hr.ikvakan.git_hub_search.utils.startActivity
+import hr.ikvakan.git_hub_search.utils.extensions.isOnline
+import hr.ikvakan.git_hub_search.utils.extensions.showToast
+import hr.ikvakan.git_hub_search.utils.extensions.startActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
