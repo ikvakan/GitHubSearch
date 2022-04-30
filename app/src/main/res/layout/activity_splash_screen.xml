@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/wellcome_to_my_demo_decode_people"
+        android:text="@string/git_hub_wellcome_message"
         android:textSize="@dimen/tvSplash_text_size"
         android:textStyle="bold" />
 </LinearLayout>
